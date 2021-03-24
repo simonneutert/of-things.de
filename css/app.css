@@ -1,0 +1,48 @@
+.label {
+  padding: 0.2em;
+}
+
+.secondary {
+  background-color: gray;
+  color: white;
+}
+#solutions {
+  display: none;
+}
+.row h2 {
+  padding: 0em 4em;
+  font-size: 1.1em;
+}
+h1 {
+  font-size: 1.2em;
+  padding: 2em;
+}
+.subheader {
+  padding-bottom: 3em;
+  padding-left: 4em;
+  padding-right: 4em;
+}
+@media screen and (max-width: 480px) {
+  .subheader {
+    padding-bottom: 3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .row h2 {
+    padding: 0em 0.7em;
+    font-size: 1.1em;
+  }
+}
+.spacer {
+  padding: 4em;
+}
+.footer-text {
+  font-size: 0.9em;
+  color: #ccc;
+}
+.bigicon {
+  font-size: 3em;
+}
+.logoicon {
+  vertical-align: middle;
+}
