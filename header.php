@@ -11,6 +11,8 @@
     <meta name="revisit-after" content="7 days">
     <meta name="robots" content="index,follow">
 
+    <meta name="google-site-verification" content="uhJa-0qzCU1uDF7m1wvVZLttGQ4NrYJlKW7F7cKmJls" />
+
     <link rel="stylesheet" href="css/foundation.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">

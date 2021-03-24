@@ -1,37 +1,42 @@
 <?php
 
-class site
-{
-    private $header;
-    private $footer;
-    private $scripts;
+	class site {
 
-    public function addHeader($header)
-    {
-        $this->header = $header;
-    }
+		private $header;
+		private $footer;
+		private $scripts;
 
-    public function addFooter($footer)
-    {
-        $this->footer = $footer;
-    }
+		public function addHeader($header) {
 
-    public function addScripts($scripts)
-    {
-        $this->scripts = $scripts;
-    }
+			$this->header = $header;
 
-    public function display($content, $title)
-    {
-        global $page;
+		}
 
-        include $this->header;
-        include $this->scripts;
+		public function addFooter($footer) {
 
-        $page->display($content);
+			$this->footer = $footer;
 
-        include $this->footer;
-    }
-}
+		}
+
+		public function addScripts($scripts) {
+
+			$this->scripts = $scripts;
+
+		}
+
+		public function display($content, $title) {
+
+			global $page;
+
+			include $this->header;
+			include $this->scripts;
+
+				$page->display($content);
+
+			include $this->footer;
+
+		}
+
+	}
 
 ?>

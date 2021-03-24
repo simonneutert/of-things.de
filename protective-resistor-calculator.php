@@ -1,10 +1,10 @@
 <?php
 
-include 'config.php';
+	include("config.php");
 
-$title = 'Protective Resistor';
+	$title = "Protective Resistor";
 
-$content = <<<EOT
+	$content = <<<EOT
 
 	<div class="row text-center">
     <div class="large-12 columns">
@@ -91,6 +91,6 @@ $content = <<<EOT
 
 EOT;
 
-$site->display($content, $title);
+	$site->display($content, $title);
 
 ?>

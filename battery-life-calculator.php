@@ -1,16 +1,16 @@
 <?php
 
-include 'config.php';
+	include("config.php");
 
-$title = 'IOT Battery Life Calculator';
+	$title = "IOT Battery Life Calculator";
 
-$content = <<<EOT
+	$content = <<<EOT
 
 	<div class="row text-center">
     <div class="large-12 columns">
       <h1>simple calculator for estimating a (LiPo) battery's life</h1>
       <p class="subheader">
-				Calculate the estimated battery life for your next diy electronics project. This can be used for Raspberry Pis, Arduinos, ESP8266 Wifi modules like Wemos, Huzzahs, Feathers and so on. If your device does not sleep, then simply set both software parameters to "1". Of course the consumption whilst active and sleeping should be equal. Results may vary from real life :-P
+				Calculate the estimated battery life for your next diy electronics project. This can be used for Raspberry Pis, Arduinos, ESP8266 Wifi modules like Wemos, Huzzahs, Feathers and so on. If your device does not sleep, then simply set the sleep time to "0". Results may vary from real life :-P
 			</p>
     </div>
   </div>
@@ -19,7 +19,7 @@ $content = <<<EOT
     <div class="large-12 columns">
       <div class="callout">
         <h3>Simply enter your data in the form below!</h3>
-        <p>Inputs marked with "*" have switchable units, change with a click on it. The results will be presented automatically.</p>
+        <p>Inputs marked with a * (asterisk) have switchable units, change with a click on it. The results will be presented automatically.</p>
         <div id="solutions">
           <hr>
           <h3>Your results: </h3>
@@ -72,7 +72,7 @@ $content = <<<EOT
           <label>consumption during code execution</label>
           <div class="input-group">
             <input type="text" type="number" placeholder="100" class="input-group-field" name="consumpactive" id="consumpactive" />
-            <span class="input-group-label">mAh</span>
+            <span class="input-group-label">mA</span>
           </div>
         </div>
       </div>
@@ -80,8 +80,8 @@ $content = <<<EOT
         <div class="row collapse">
           <label>consumption in sleep mode*</label>
           <div class="input-group">
-            <input type="text" type="number" placeholder="1" class="input-group-field" name="consumpsleep" id="consumpsleep" />
-            <span class="input-group-label" id="unitconsumpsleep" data-unit="1">mAh</span>
+            <input type="text" type="number" placeholder="80" class="input-group-field" name="consumpsleep" id="consumpsleep" />
+            <span class="input-group-label" id="unitconsumpsleep" data-unit="0.001">&micro;A</span>
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@ $content = <<<EOT
         <div class="row collapse">
           <label>discharge safety</label>
           <div class="input-group">
-            <input type="text" type="number" placeholder="20" class="input-group-field" name="powerliponet" id="powerliponet" />
+            <input type="text" type="number" placeholder="20" class="input-group-field" name="powerliposafe" id="powerliposafe" />
             <span class="input-group-label">%</span>
           </div>
         </div>
@@ -122,19 +122,27 @@ $content = <<<EOT
   </div>
 
 	<div class="row text-center">
-		<p>Video with explanations of a use case made by the incredible <a href="https://www.youtube.com/channel/UCu7_D0o48KbfhpEohoP7YSQ" target="_blank">Andreas Spiess</a></p>
+		<p>Videos with explanations of a use case made by the incredible <a href="https://www.youtube.com/channel/UCu7_D0o48KbfhpEohoP7YSQ" target="_blank">Andreas Spiess</a></p>
 		<div class="flex-video widescreen">
 	  	<iframe width="420" height="315" src="https://www.youtube.com/embed/IYuYTfO6iOs" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+
+	<div class="row text-center">
+		<div class="flex-video widescreen">
+	  	<iframe width="420" height="315" src="https://www.youtube.com/embed/6NsBN42B80Q" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
 
 	<div class="spacer">
 	</div>
 
+
+
 	<script src="js/battery-life-calculator.js"></script>
 
 EOT;
 
-$site->display($content, $title);
+	$site->display($content, $title);
 
 ?>

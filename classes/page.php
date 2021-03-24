@@ -1,11 +1,13 @@
 <?php
 
-class page
-{
-    public function display($content)
-    {
-        echo $content;
-    }
-}
+	class page {
+
+		public function display($content) {
+
+			echo $content;
+
+		}
+
+	}
 
 ?>
