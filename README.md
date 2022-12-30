@@ -2,6 +2,12 @@
 
 __simply upload this repository to a simple plain php webserver__
 
+## Battery Life Calculator in JavaScript
+
+the logic without HTML interaction can be found here:
+
+https://github.com/simonneutert/batterylife-calculator
+
 ## Pull Requests / Contributions
 
 Feel free to contribute to this codebase, I will be very happy to add new features and calculations.
